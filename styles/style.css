@@ -1,0 +1,18 @@
+body {
+    --time: .3s;
+}
+
+#error {
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+    right: 0;
+    top: 70%;
+    left: 70%;
+    width: auto;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #34839E;
+    display: none;
+}

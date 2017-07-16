@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Player</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/player.css">
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/2.1.3/shaka-player.compiled.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="player-wrapper">
+            <video id="player-html5" preload="auto">
+            </video>
+            <div id="control-bar" class="control-bar">
+                <div id="play-div" class="button-div pointer div-position">
+                    <i class="fa fa-play button" aria-hidden="true" id="play"></i>
+                </div>
+                <div class="time-div div-position">
+                    <p id="time">00:00</p>
+                </div>
+                <div class="range-div div-position">
+                    <div id="progress-bar"></div>
+                    <input class="pointer" type="range" min="0" max="100" value="0" id="seek-bar">
+                </div>
+                <div id="volume-div" class="button-div pointer div-position">
+                    <i class="fa fa-volume-up button" aria-hidden="true" id="volume"></i>
+                </div>
+                <div class="range-div div-position">
+                    <input class="pointer" type="range" min="0" max="100" id="volume-bar">
+                </div>
+                <div id="full-screen-div" class="button-div pointer div-position">
+                    <i class="fa fa-arrows-alt button" aria-hidden="true" id="full-screen"></i>
+                </div>
+            </div>
+            <div id="loader">
+            </div>
+            <div id="error">
+                <p id="error-detail"></p>
+            </div>
+        </div>
+        <div id="settings">
+
+        </div>
+    </div>
+    <script src="./scripts/errors.js"></script>
+    <script src="./scripts/player-settings.js"></script>
+    <script src="./scripts/shaka-player.js"></script>
+    <script src="./scripts/player.js"></script>
+    <script src="./scripts/setup.js"></script>
+</body>
+</html>
